@@ -1,0 +1,21 @@
+a=input('enter the amplitude ');
+f=input('enter the fre ');
+fs=input('enter the sampling fre ');
+t=0:0.01:2;
+y=a*sin(2*pi*f*t);
+subplot(2,2,1);
+plot(t,y);
+%stem(t,y);
+ylabel('Amplitude');
+xlabel('time');
+title('Sinusoidal Sequence');
+
+%n = -20:1:20;
+n=0:1/fs:2;
+y=a*sin(2*pi*f*n/fs);
+subplot(2,2,2);
+stem(n,y);
+%plot(n,y);
+ylabel('Amplitude');
+xlabel('time');
+title('Sampled Sinusoidal Sequence');
